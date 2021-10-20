@@ -18,7 +18,7 @@ Set up template variables.
 \\renewcommand{\\familydefault}{\\sfdefault}
 
 % Change the colours if you want to
-\\definecolor{SlateGrey}{HTML}{2E2E2E}
+\\definecolor{SlateGrey}{HTML}{2E2A2B}
 \\definecolor{LightGrey}{HTML}{666666}
 \\definecolor{DarkPastelRed}{HTML}{450808}
 \\definecolor{PastelRed}{HTML}{8F0D0D}
@@ -66,9 +66,8 @@ Set up template variables.
 #+MACRO: cvevent \cvevent{$1}{$2}{$3}{$4}
 #+MACRO: cvachievement \cvachievement{$1}{$2}{$3}{$4}
 #+MACRO: cvtag \cvtag{$1}
-#+MACRO: divider \divider
 #+MACRO: par-div \par\divider
-#+MACRO: new-page \newpage
+#+MACRO: cvskill \cvskill{$1}{$2}
 
 * Header :ignore:
 ** Photo, tagline :ignore:
@@ -102,15 +101,15 @@ Set up template variables.
 #+begin_export latex
 \begin{quote}
 ``\bold{Resourceful}, \bold{dynamic}, and \bold{creative}. I am a 3rd year student at the University of St Andrews, striving to learn, and obsessed with finding solutions to real problems, be it small or big. I am particularly interested at problems related
-to finance, with an understanding of Object Oriented programming, algorithms, statistics, and artificial intelligence.''
+to finance, with an understanding of Object Oriented programming, algorithms, and statistics.''
 \end{quote}
 #+end_export
 
 * Skills
-{{{cvtag(C)}}}
+{{{cvtag(C*)}}}
 {{{cvtag(C++)}}}
 {{{cvtag(C\#)}}}
-{{{cvtag(Java)}}}
+{{{cvtag(Java*)}}}
 {{{cvtag(Javascript)}}}
 {{{cvtag(Go)}}}
 {{{cvtag(Rust)}}}
@@ -119,21 +118,19 @@ to finance, with an understanding of Object Oriented programming, algorithms, st
 {{{cvtag(R)}}}
 {{{par-div}}}
 
-{{{cvtag(Git)}}}
+{{{cvtag(Git*)}}}
 {{{cvtag(Numpy)}}}
 {{{cvtag(Unity)}}}
 {{{cvtag(CMake)}}}
 {{{cvtag(Autoconf)}}}
-{{{cvtag(Gradle)}}}
-{{{cvtag(JUnit)}}}
+{{{cvtag(Gradle*)}}}
+{{{cvtag(JUnit*)}}}
 {{{par-div}}}
 
-{{{cvtag(Linux)}}}
+{{{cvtag(Linux*)}}}
 {{{cvtag(Systemd)}}}
 {{{cvtag(MariaDB)}}}
-{{{cvtag(Vim)}}}
-{{{cvtag(Emacs)}}}
-{{{cvtag(LaTeX)}}}
+{{{cvtag(LaTeX*)}}}
 
  *: high proficiency
 
@@ -183,11 +180,9 @@ to finance, with an understanding of Object Oriented programming, algorithms, st
 #+end_export
 
 * Languages
-#+begin_export latex
-\cvskill{French}{5}
-\cvskill{English}{5}
-\cvskill{Mandarin}{3}
-#+end_export
+{{{cvskill(French, 5)}}}
+{{{cvskill(English, 5)}}}
+{{{cvskill(Mandarin, 3)}}}
 
 
 
@@ -203,7 +198,7 @@ to finance, with an understanding of Object Oriented programming, algorithms, st
 
 ** Orange 4CSR Tech :ignore:
 {{{cvevent(Orange Innovation Contest 4CSRtech 3rd place, HKUST, Nov 2018, Hong Kong)}}}
-+ Running under team LFI - [[https://www.diplomatie.gouv.fr/IMG/pdf/france_hkust_innovation_hub_-_newsletter_6_cle0571be.pdf][/Report link here/]]
++ Running under team LFI - [[https://www.diplomatie.gouv.fr/IMG/pdf/france_hkust_innovation_hub_-_newsletter_6_cle0571be.pdf][/Link here/]]
 + Entry: Project *SOFI* - inter-school, student, teacher, and staff communication system.
 + Prize: HKD *10,000.00* (~GBP *1,000.00*)
 
