@@ -1,0 +1,216 @@
+#+TITLE: CV
+#+AUTHOR: Alexandre Guerville
+
+
+
+* Config :noexport:
+** Latex Config
+Set up template variables.
+#+begin_src emacs-lisp :exports none :results none :eval always
+(setq org-latex-logfiles-extensions (quote ("lof" "lot" "tex~" "aux" "idx" "log" "out" "toc" "nav" "snm" "vrb" "dvi" "fdb_latexmk" "blg" "brf" "fls" "entoc" "ps" "spl" "bbl" "xmpi" "run.xml" "bcf")))
+(add-to-list 'org-latex-classes
+             '("altacv" "\\documentclass[10pt,a4paper,ragged2e,withhyper]{altacv}
+
+% Change the page layout if you need to
+\\geometry{left=1.25cm,right=1.25cm,top=1.5cm,bottom=1.5cm,columnsep=1.2cm}
+
+% Use roboto and lato for fonts
+\\renewcommand{\\familydefault}{\\sfdefault}
+
+% Change the colours if you want to
+\\definecolor{SlateGrey}{HTML}{2E2E2E}
+\\definecolor{LightGrey}{HTML}{666666}
+\\definecolor{DarkPastelRed}{HTML}{450808}
+\\definecolor{PastelRed}{HTML}{8F0D0D}
+\\definecolor{GoldenEarth}{HTML}{E7D192}
+\\colorlet{name}{black}
+\\colorlet{tagline}{PastelRed}
+\\colorlet{heading}{DarkPastelRed}
+\\colorlet{headingrule}{GoldenEarth}
+\\colorlet{subheading}{PastelRed}
+\\colorlet{accent}{PastelRed}
+\\colorlet{emphasis}{SlateGrey}
+\\colorlet{body}{LightGrey}
+
+% Change some fonts, if necessary
+\\renewcommand{\\namefont}{\\Huge\\rmfamily\\bfseries}
+\\renewcommand{\\personalinfofont}{\\footnotesize}
+\\renewcommand{\\cvsectionfont}{\\LARGE\\rmfamily\\bfseries}
+\\renewcommand{\\cvsubsectionfont}{\\large\\bfseries}
+
+% Change the bullets for itemize and rating marker
+% for \cvskill if you want to
+\\renewcommand{\\itemmarker}{{\\small\\textbullet}}
+\\renewcommand{\\ratingmarker}{\\faCircle}
+"
+
+               ("\\cvsection{%s}" . "\\cvsection*{%s}")
+               ("\\cvevent{%s}" . "\\cvevent*{%s}")))
+(setq org-latex-packages-alist 'nil)
+(setq org-latex-default-packages-alist
+      '(("rm" "roboto"  t)
+        ("defaultsans" "lato" t)
+        ("" "paracol" t)
+        ))
+#+end_src
+
+#+LATEX_CLASS: altacv
+#+LATEX_HEADER: \columnratio{0.6} % Set the left/right column width ratio to 6:4.
+#+LATEX_HEADER: \usepackage[bottom]{footmisc}
+
+** Exporter Settings
+#+EXPORT_FILE_NAME: ./curriculum-vitae.pdf
+#+OPTIONS: toc:nil title:nil H:1
+
+** Macros
+#+MACRO: cvevent \cvevent{$1}{$2}{$3}{$4}
+#+MACRO: cvachievement \cvachievement{$1}{$2}{$3}{$4}
+#+MACRO: cvtag \cvtag{$1}
+#+MACRO: divider \divider
+#+MACRO: par-div \par\divider
+#+MACRO: new-page \newpage
+
+* Header :ignore:
+** Photo, tagline :ignore:
+#+begin_export latex
+\name{Alexandre Guerville}
+\tagline{Computer Science Student}
+#+end_export
+
+
+** Personal Info :ignore:
+#+begin_export latex
+\personalinfo{
+  \homepage{www.guerville.dev}
+  \email{alexandre@guerville.dev}
+  \phone{+44 7863 882408}
+  \location{St Andrews, UK}
+  \github{UnikMask}
+  \linkedin{alexandre-guerville-2e2a2b}
+}
+\makecvheader
+#+end_export
+
+* CV Col 1 :ignore:
+
+#+begin_export latex
+\begin{paracol}{2}
+#+end_export
+
+* Personal Statement :ignore:
+
+#+begin_export latex
+\begin{quote}
+``\bold{Resourceful}, \bold{dynamic}, and \bold{creative}. I am a 3rd year student at the University of St Andrews, striving to learn, and obsessed with finding solutions to real problems, be it small or big. I am particularly interested at problems related
+to finance, with an understanding of Object Oriented programming, algorithms, statistics, and artificial intelligence.''
+\end{quote}
+#+end_export
+
+* Skills
+{{{cvtag(C)}}}
+{{{cvtag(C++)}}}
+{{{cvtag(C\#)}}}
+{{{cvtag(Java)}}}
+{{{cvtag(Javascript)}}}
+{{{cvtag(Go)}}}
+{{{cvtag(Rust)}}}
+{{{cvtag(Python)}}}
+{{{cvtag(MySQL)}}}
+{{{cvtag(R)}}}
+{{{par-div}}}
+
+{{{cvtag(Git)}}}
+{{{cvtag(Numpy)}}}
+{{{cvtag(Unity)}}}
+{{{cvtag(CMake)}}}
+{{{cvtag(Autoconf)}}}
+{{{cvtag(Gradle)}}}
+{{{cvtag(JUnit)}}}
+{{{par-div}}}
+
+{{{cvtag(Linux)}}}
+{{{cvtag(Systemd)}}}
+{{{cvtag(MariaDB)}}}
+{{{cvtag(Vim)}}}
+{{{cvtag(Emacs)}}}
+{{{cvtag(LaTeX)}}}
+
+ *: high proficiency
+
+* Projects
+
+** Test Works :ignore:
+{{{cvevent(TestWorks: A linear regression command interface program,, July 2018 - February 2019, Hong Kong)}}}
++ Supports models for *linear regressions*, given data file.
++ Integrated real estate website crawler for in-sample and out-of-sample data retrieval.
+
+{{{cvtag(C++)}}}
+{{{cvtag(armadillo)}}}
+
+** Action Man :ignore:
+{{{par-div}}}
+
+{{{cvevent(Action Man: Save Your Homeland - Android game,, Sept 2017 - November 2017, Hong Kong)}}}
++ Pixel-art 2D side-scroller infinite shooter.
++ Published on Play Store - [[https://play.google.com/store/apps/details?id=com.GreatTerminator.Action_Man][/Play Store link here/]].
+
+
+{{{cvtag(C\#)}}} {{{cvtag(Unity)}}}
+
+
+** Shogi Player :ignore:
+{{{par-div}}}
+
+{{{cvevent(Shogi Program, University of St Andrews, April 2020, St. Andrews\, UK)}}}
++ Program to play animal chess and official shogi.
++ Supports computer player, and multiple game formats.
+
+{{{cvtag(Java)}}} {{{cvtag(Gradle)}}}
+
+
+** Transpire  :ignore:
+{{{par-div}}}
+
+{{{cvevent(Transpire,, April 2021, St. Andrews\, UK)}}}
++ Transpiles code written in foreign languages to runnable/compilable code.
++ Mainly worked on concept, interface, and server-based translation fetching.
+
+{{{cvtag(Java)}}}
+
+* CV Col 2 :ignore:
+#+begin_export latex
+\switchcolumn
+#+end_export
+
+* Languages
+#+begin_export latex
+\cvskill{French}{5}
+\cvskill{English}{5}
+\cvskill{Mandarin}{3}
+#+end_export
+
+
+
+* Education
+{{{cvevent(BSc Computer Science, University of St Andrews, Sep 2019-May 2023, St. Andrews\, UK)}}}
++ GPA: 3.5/4.0
+
+* Experience
+** Chanel :ignore:
+{{{cvevent(Software Development High School Intern, Chanel Limited HK, June 2017, Hong Kong)}}}
+
+* Awards
+
+** Orange 4CSR Tech :ignore:
+{{{cvevent(Orange Innovation Contest 4CSRtech 3rd place, HKUST, Nov 2018, Hong Kong)}}}
++ Running under team LFI - [[https://www.diplomatie.gouv.fr/IMG/pdf/france_hkust_innovation_hub_-_newsletter_6_cle0571be.pdf][/Report link here/]]
++ Entry: Project *SOFI* - inter-school, student, teacher, and staff communication system.
++ Prize: HKD *10,000.00* (~GBP *1,000.00*)
+
+
+** STACSHACK :ignore:
+{{{par-div}}}
+
+{{{cvevent(University of St. Andrews STACSHACK 2021 Sponsor Award, University of St. Andrews, April 2021, St. Andrews\, UK)}}}
++ Entry: *Transpire* - Foreign language code to compilable code transpiler.
++ Won Sponsor award from Theodo for Most Pragmatic Product (Solve the biggest problem in the simplest way possible).
