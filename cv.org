@@ -81,7 +81,7 @@ Set up template variables.
 #+begin_export latex
 \personalinfo{
   \homepage{www.guerville.dev}
-  \email{alexandre@guerville.dev}
+  \email{alexandre.guerville@hotmail.com}
   \phone{+44 7863 882408}
   \location{St Andrews, UK}
   \github{UnikMask}
@@ -136,7 +136,25 @@ to finance, with an understanding of Object Oriented programming, algorithms, an
 
 * Projects
 
+** Transpire :ignore:
+{{{cvevent(Transpire,, April 2021, St. Andrews\, UK)}}}
++ Transpiles code written in foreign languages to runnable/compilable code.
++ Mainly worked on concept, interface, and server-based translation fetching.
+
+{{{cvtag(Java)}}}
+
+** Shogi Player :ignore:
+{{{par-div}}}
+
+{{{cvevent(Shogi Program, University of St Andrews, April 2020, St. Andrews\, UK)}}}
++ Program to play animal chess and official shogi.
++ Supports computer player, and multiple game formats.
+
+{{{cvtag(Java)}}} {{{cvtag(Gradle)}}}
+
 ** Test Works :ignore:
+{{{par-div}}}
+
 {{{cvevent(TestWorks: A linear regression command interface program,, July 2018 - February 2019, Hong Kong)}}}
 + Supports models for *linear regressions*, given data file.
 + Integrated real estate website crawler for in-sample and out-of-sample data retrieval.
@@ -154,26 +172,6 @@ to finance, with an understanding of Object Oriented programming, algorithms, an
 
 {{{cvtag(C\#)}}} {{{cvtag(Unity)}}}
 
-
-** Shogi Player :ignore:
-{{{par-div}}}
-
-{{{cvevent(Shogi Program, University of St Andrews, April 2020, St. Andrews\, UK)}}}
-+ Program to play animal chess and official shogi.
-+ Supports computer player, and multiple game formats.
-
-{{{cvtag(Java)}}} {{{cvtag(Gradle)}}}
-
-
-** Transpire  :ignore:
-{{{par-div}}}
-
-{{{cvevent(Transpire,, April 2021, St. Andrews\, UK)}}}
-+ Transpiles code written in foreign languages to runnable/compilable code.
-+ Mainly worked on concept, interface, and server-based translation fetching.
-
-{{{cvtag(Java)}}}
-
 * CV Col 2 :ignore:
 #+begin_export latex
 \switchcolumn
@@ -184,11 +182,10 @@ to finance, with an understanding of Object Oriented programming, algorithms, an
 {{{cvskill(English, 5)}}}
 {{{cvskill(Mandarin, 3)}}}
 
-
-
 * Education
 {{{cvevent(BSc Computer Science, University of St Andrews, Sep 2019-May 2023, St. Andrews\, UK)}}}
-+ GPA: 3.5/4.0
++ St Andrews GPA: 16.5/20
++ US GPA equivalent: 3.7-3.9/4.0
 
 * Experience
 ** Chanel :ignore:
@@ -196,16 +193,16 @@ to finance, with an understanding of Object Oriented programming, algorithms, an
 
 * Awards
 
+** STACSHACK :ignore:
+{{{cvevent(University of St. Andrews STACSHACK 2021 Sponsor Award, University of St. Andrews, April 2021, St. Andrews\, UK)}}}
++ Entry: *Transpire* - Foreign language code to compilable code transpiler.
++ Won Sponsor award from Theodo for Most Pragmatic Product (Solve the biggest problem in the simplest way possible).
+
 ** Orange 4CSR Tech :ignore:
+{{{par-div}}}
+
 {{{cvevent(Orange Innovation Contest 4CSRtech 3rd place, HKUST, Nov 2018, Hong Kong)}}}
 + Running under team LFI - [[https://www.diplomatie.gouv.fr/IMG/pdf/france_hkust_innovation_hub_-_newsletter_6_cle0571be.pdf][/Link here/]]
 + Entry: Project *SOFI* - inter-school, student, teacher, and staff communication system.
 + Prize: HKD *10,000.00* (~GBP *1,000.00*)
 
-
-** STACSHACK :ignore:
-{{{par-div}}}
-
-{{{cvevent(University of St. Andrews STACSHACK 2021 Sponsor Award, University of St. Andrews, April 2021, St. Andrews\, UK)}}}
-+ Entry: *Transpire* - Foreign language code to compilable code transpiler.
-+ Won Sponsor award from Theodo for Most Pragmatic Product (Solve the biggest problem in the simplest way possible).
